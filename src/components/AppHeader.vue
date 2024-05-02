@@ -74,7 +74,8 @@ export default {
 
 header{
     @include flex(row, space-around, center);
-    padding: 15px 0;
+    padding: 8px 0;
+    margin-bottom:0;
 
     ul{
         @include flex(row, center, flex-end);
@@ -90,7 +91,7 @@ header{
 
             &.active {
                 color: $active-color;
-                border-bottom:2px solid $active-color;
+                border-bottom:4px solid $active-color;
              
             }
         }
