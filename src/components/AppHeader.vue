@@ -55,7 +55,7 @@ export default {
 <template>
 <header>
 <div class="header-logo">
-    <img src="../assets/img/dc-logo.png" alt="">
+    <img src="../assets/img/dc-logo.png" alt="logo dc comics">
 </div>
    
     <ul class="navigation">
