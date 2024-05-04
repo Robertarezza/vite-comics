@@ -1,4 +1,5 @@
 <script>
+
 export default {
   data() {
     return {
@@ -38,11 +39,15 @@ export default {
   <section>
     <ul>
       <li v-for="image in images">
+      <a href="">
         <img :src="getImageUrl(image.name)" alt="" />
-        <h4>{{ image.title }}</h4>
+      </a>
+      <h4>{{ image.title }}</h4>
+       
       </li>
     </ul>
   </section>
+  
 </template>
 
 <style scoped lang="scss">
@@ -53,6 +58,10 @@ section {
   background-color: $active-color;
   color: white;
   padding:3rem 0;
+  position: relative;
+    top: 0;
+    left: 0;
+    z-index: 99;
 
   ul {
     list-style-type: none;
@@ -68,8 +77,15 @@ section {
       h4 {
         font-weight: 200;
         font-size: 0.8rem;
+
+        &:hover{
+          cursor:pointer;
+        }
+        
       }
     }
   }
 }
+
+
 </style>

@@ -18,7 +18,10 @@ export default {
 
 <template>
   <div class="card">
+  <a href="">
     <img :src="cardImage" alt="">
+  </a>
+    
     <h4>{{cardTitle}}</h4>
   </div>
  
@@ -28,6 +31,12 @@ export default {
 
 .card{
   text-align:center;
+
+  &:hover{
+    transform: scale(1.1);
+    transition: 1s;
+        }
+  
 
 
   img{
@@ -39,6 +48,10 @@ export default {
     color:white;
     font-size: 0.7rem;
     text-transform: uppercase;
+
+    &:hover{
+          cursor:pointer;
+        }
   }
 }
 

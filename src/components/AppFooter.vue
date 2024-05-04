@@ -99,17 +99,20 @@ export default {
         </section>
       </div>
       <div class="content-footer-dx">
-        <section class="immag-footer"></section>
+        <section class="immag-footer">
+        <img src="../assets/img/dc-logo.png" alt="">
+        </section>
       </div>
     </div>
     <div class="cont-footer-down">
-      <button type="">SING-UP NOW!</button>
+      <button type=""> SING-UP NOW!</button>
       <div>
         <h3>FOOLLOW US</h3>
         <ul>
           <li v-for="image in linkFooter">
-         
-            <img :src="getImageUrl(image.url)" alt="" />
+         <a href="">
+          <img :src="getImageUrl(image.url)" alt="" /></a>
+           
           </li>
         </ul>
       </div>
@@ -124,7 +127,7 @@ export default {
 .footer {
   @include flex(row, space-between, center);
   background-image: url(../assets/img/footer-bg.jpg);
-  width: 100%;
+  // width: 100%;
   position: relative;
   z-index: 1;
   margin: 0 auto;
@@ -161,16 +164,12 @@ export default {
     margin: 0 5px;
     width: 50%;
 
-    .immag-footer {
-      background-image: url(../assets/img/dc-logo.png);
-      background-size: cover;
-      position: absolute;
-      top: 18px;
-      right: 112px;
-      width: 286px;
-      height: 284px;
-      z-index: 2;
-      transform: rotate(31deg);
+    img {
+    transform: rotate(35deg); 
+    position: absolute;
+    top: -10%;
+    right: 11%;
+    width: 25vw;
     }
   }
 }
@@ -179,6 +178,9 @@ export default {
  
   @include flex(row, space-between, center);
   padding: 20px 20px;
+  z-index: 1;
+    position: relative;
+    // width: 100%;
 
   button {
     background-color: $footer-color;
@@ -187,6 +189,12 @@ export default {
     font-weight: 900;
     padding: 10px;
     font-size: 1rem;
+    cursor:pointer;
+
+    &:hover{
+      transform: scale(1.1);
+    transition: 1s;
+    }
   }
 
   div{
