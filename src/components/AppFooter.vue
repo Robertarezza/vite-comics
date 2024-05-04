@@ -36,7 +36,29 @@ export default {
           title: "Shop DC Collectibles",
         },
       ],
+      linkFooter: [
+        {
+          url: "footer-facebook.png",
+        },
+        {
+          url: "footer-periscope.png",
+        },
+        {
+          url: "footer-pinterest.png",
+        },
+        {
+          url: "footer-twitter.png",
+        },
+        {
+          url: "footer-youtube.png",
+        },
+      ],
     };
+  },
+  methods: {
+    getImageUrl(imageName) {
+      return new URL(`../assets/img/${imageName}`, import.meta.url).href;
+    },
   },
 };
 </script>
@@ -77,9 +99,19 @@ export default {
         </section>
       </div>
       <div class="content-footer-dx">
-        <section class="immag-footer">
-          <!-- <img src="../assets/img/dc-logo.png" alt="">  -->
-        </section>
+        <section class="immag-footer"></section>
+      </div>
+    </div>
+    <div class="cont-footer-down">
+      <button type="">SING-UP NOW!</button>
+      <div>
+        <h3>FOOLLOW US</h3>
+        <ul>
+          <li v-for="image in linkFooter">
+         
+            <img :src="getImageUrl(image.url)" alt="" />
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
@@ -87,6 +119,7 @@ export default {
 
 <style scoped lang="scss">
 @use "../style/partials/_mixin.scss" as *;
+@use "../style/partials/_variables.scss" as *;
 
 .footer {
   @include flex(row, space-between, center);
@@ -95,6 +128,7 @@ export default {
   position: relative;
   z-index: 1;
   margin: 0 auto;
+  padding: 0 20px;
 
   .content-footer-sx {
     padding: 2rem 0;
@@ -137,6 +171,37 @@ export default {
       height: 284px;
       z-index: 2;
       transform: rotate(31deg);
+    }
+  }
+}
+.cont-footer-down {
+  background-color: $footer-color;
+  height: 200px;
+  @include flex(row, space-between, center);
+  padding: 0 20px;
+
+  button {
+    background-color: $footer-color;
+    border: 1px solid $active-color;
+    color: white;
+    font-weight: 900;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  div{
+    @include flex(row, space-between, center);
+
+h3{
+  margin-right: 30px;
+  color:$active-color;
+}
+
+
+    ul{
+      @include flex(row, space-between, center);
+      list-style-type: none;
+        gap: 1rem;
     }
   }
 }

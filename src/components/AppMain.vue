@@ -90,7 +90,7 @@ components: {
 <template>
     <main>
         <div class="jumbo">
-            <!-- <img src="../assets/img/jumbotron.jpg" alt=""> -->
+           
         </div>
         <div class="content-main">
         <div class="row">
