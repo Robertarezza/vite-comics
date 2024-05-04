@@ -176,9 +176,9 @@ export default {
 }
 .cont-footer-down {
   background-color: $footer-color;
-  height: 200px;
+ 
   @include flex(row, space-between, center);
-  padding: 0 20px;
+  padding: 20px 20px;
 
   button {
     background-color: $footer-color;
