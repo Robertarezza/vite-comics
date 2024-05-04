@@ -6,5 +6,5 @@
 ## Bonus:**
 - [x] Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
 
-- [ ] create un nuovo componente per visualizzare le card dei fumetti, prendendo i dati dal file json che trovate in allegato.
+- [x] create un nuovo componente per visualizzare le card dei fumetti, prendendo i dati dal file json che trovate in allegato.
 - [ ] Una volta inseriti tutti i contenuti dinamicamente, completate il vostro layout e rifinite i dettagli con Sass.

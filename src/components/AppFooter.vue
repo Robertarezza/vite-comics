@@ -131,12 +131,12 @@ export default {
       background-image: url(../assets/img/dc-logo.png);
       background-size: cover;
       position: absolute;
-      top: 80px;
+      top: 18px;
       right: 112px;
-      width: 10%;
-      height: 33%;
+      width: 286px;
+      height: 284px;
       z-index: 2;
-      transform: rotate(-50deg);
+      transform: rotate(31deg);
     }
   }
 }

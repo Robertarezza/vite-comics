@@ -89,6 +89,9 @@ components: {
 
 <template>
     <main>
+        <div class="jumbo">
+            <!-- <img src="../assets/img/jumbotron.jpg" alt=""> -->
+        </div>
         <div class="content-main">
         <div class="row">
         <div class="col" v-for="curCard in comicBooks ">
@@ -105,11 +108,21 @@ components: {
 <style scoped lang="scss">
 @use "../style/partials/_mixin.scss" as *;
 
+.jumbo{
+    background-image:url(../assets/img/jumbotron.jpg);
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+ 
+}
+
 
 .content-main {
     background-color:black ;
     @include flex(column, center, center);
     padding: 2rem 5rem;
+
+   
 
     .row{
         @include flex(row, space-between, stretch);
