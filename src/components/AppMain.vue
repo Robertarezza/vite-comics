@@ -2,10 +2,12 @@
 import ComicsCard from "./ComicsCard.vue";
 import ButtonGeneral from "./ButtonGeneral.vue";
 
+
 export default {
   components: {
     ComicsCard,
     ButtonGeneral,
+ 
 
   },
   data() {
@@ -94,23 +96,25 @@ export default {
           type: "graphic novel",
         },
       ],
+     
     };
   },
+ 
 };
 </script>
 
 <template>
   <main>
     <div class="jumbo">
-    <div class="buttom">
+    <div class="botton">
         <ButtonGeneral title="CURRENT SERIES" />
     </div>
         
     </div>
     <div class="content-main">
       <div class="row">
-        <div class="col" v-for="curCard in comicBooks">
-          <ComicsCard :cardImage="curCard.thumb" :cardTitle="curCard.series" />
+        <div class="col" v-for="curCard in comicBooks" >
+          <ComicsCard :cardImage="curCard.thumb" :cardTitle="curCard.series" :cardType="curCard.type" :cardPrice="curCard.price"/>
         </div>
       </div>
       <ButtonGeneral title="LOAD MORE" />
@@ -127,14 +131,14 @@ export default {
 .jumbo {
   background-image: url(../assets/img/jumbotron.jpg);
   width: 100%;
-  height: 200px;
+  height: 290px;
   background-size: cover;
 
 
 
-  .buttom{
+  .botton{
     position:relative;
-    top:180px;
+    top:264px;
     left: 90px;
   }
 }
@@ -151,6 +155,8 @@ export default {
     .col {
       width: 15%;
       margin-bottom: 1rem;
+
+  
     }
   }
 }
